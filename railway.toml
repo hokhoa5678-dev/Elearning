@@ -1,9 +1,8 @@
 [build]
-# env = { PHP_VERSION = "8.2" } # Dòng này có thể xóa đi hoặc cứ để đó với dấu #
 builder = "railway/php"
 
 [build.env]
 PHP_VERSION = "8.2"
 
 [php]
-extensions = ["ctype", "curl", "dom", "fileinfo", "filter", "hash", "mbstring", "openssl", "pcdo", "session", "tokenizer", "xml", "gd", "zip"]
+extensions = ["ctype", "curl", "dom", "fileinfo", "filter", "hash", "mbstring", "openssl", "pdo", "pdo_mysql", "session", "tokenizer", "xml", "gd", "zip"]
