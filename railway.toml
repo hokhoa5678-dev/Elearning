@@ -1,8 +1,7 @@
 [build]
-builder = "railpack/php"
-
-[packages]
-php = "8.2"
+# Dùng railpack PHP tự động, không cần builder
+[build.env]
+  PHP_VERSION = "8.2"
 
 [php]
 extensions = [
@@ -19,5 +18,5 @@ extensions = [
   "session",
   "tokenizer",
   "xml",
-  "gd"  # ✅ thêm gd ở đây
+  "gd"  # ✅ thêm extension gd
 ]
