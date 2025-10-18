@@ -1,22 +1,7 @@
+# railway.toml - cấu hình chuẩn cho Laravel + GD trên Railway (Railpack 0.9.x)
+
 [build]
-# Dùng railpack PHP tự động, không cần builder
-[build.env]
-  PHP_VERSION = "8.2"
+env = { PHP_VERSION = "8.2" }
 
 [php]
-extensions = [
-  "ctype",
-  "curl",
-  "dom",
-  "fileinfo",
-  "filter",
-  "hash",
-  "mbstring",
-  "openssl",
-  "pcre",
-  "pdo",
-  "session",
-  "tokenizer",
-  "xml",
-  "gd"  # ✅ thêm extension gd
-]
+extensions = ["gd"]
