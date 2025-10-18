@@ -1,8 +1,17 @@
+version = "1"
+
 [build]
 builder = "railway/php"
 
 [build.env]
 PHP_VERSION = "8.2"
+
+[build.commands]
+pre_install = "apt-get update && apt-get install -y nodejs npm"
+post_install = "composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-req=ext-gd"
+
+[deploy]
+startCommand = "php artisan serve --host=0.0.0.0 --port=${PORT}"
 
 [php]
 extensions = ["ctype", "curl", "dom", "fileinfo", "filter", "hash", "mbstring", "openssl", "pdo", "pdo_mysql", "session", "tokenizer", "xml", "gd", "zip"]

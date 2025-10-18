@@ -1,15 +1,9 @@
 {
+  "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "steps": [
-      "composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-req=ext-gd",
-      "npm install",
-      "npm run build",
-      "php artisan config:cache",
-      "php artisan route:cache",
-      "php artisan view:cache"
-    ]
+    "builder": "NIXPACKS"
   },
   "deploy": {
-    "command": "php artisan serve --host=0.0.0.0 --port=${PORT}"
+    "startCommand": "php artisan serve --host=0.0.0.0 --port=${PORT}"
   }
 }
