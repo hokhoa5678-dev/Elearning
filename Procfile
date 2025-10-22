@@ -1,1 +1,1 @@
-web: composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-req=ext-gd && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan serve --host=0.0.0.0 --port=${PORT}
+web: vendor/bin/heroku-php-apache2 public/
