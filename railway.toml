@@ -1,0 +1,16 @@
+version = "1"
+
+[build]
+builder = "railway/php"
+
+[build.env]
+PHP_VERSION = "8.2"
+
+[build.commands]
+post_install = "composer install --no-dev --optimize-autoloader --no-interaction"
+
+[deploy]
+startCommand = "vendor/bin/heroku-php-apache2 public/"
+
+[php]
+extensions = ["ctype", "curl", "dom", "fileinfo", "filter", "hash", "mbstring", "openssl", "pdo", "pdo_mysql", "session", "tokenizer", "xml", "gd", "zip"]
